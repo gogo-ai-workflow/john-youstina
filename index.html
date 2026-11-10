@@ -7,7 +7,7 @@
 <meta name="description" content="جون و يوستينا · السبت ٢١ نوفمبر ٢٠٢٦ · دعوتكم لمشاركتنا فرحتنا">
 <meta property="og:type" content="website">
 <meta property="og:title" content="جون و يوستينا · John &amp; Youstina">
-<meta property="og:description" content="السبت ٢١ نوفمبر ٢٠٢٦ — حضوركم يُكمل فرحتنا">
+<meta property="og:description" content="بمشيئة الربّ · السبت ٢١ نوفمبر ٢٠٢٦ — حضوركم بركةٌ لنا">
 <meta property="og:image" content="https://gogo-ai-workflow.github.io/john-youstina/img/hero.jpg">
 <meta property="og:url" content="https://gogo-ai-workflow.github.io/john-youstina/">
 <meta name="twitter:card" content="summary_large_image">
@@ -17,16 +17,17 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Noto+Nastaliq+Urdu:wght@600;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 /* Layout: one centered "invitation column" (max 600px) that scrolls like an unfolding card; ivory paper, gold foil, blush petals. Deliberately single (light) theme, like a printed invitation. */
 :root{
   --paper:#fbf4e8; --paper2:#f3e4c8; --ink:#4f321a; --ink2:#7a5530;
   --gold:#b98a3c; --gold-hi:#f3dc9b; --gold-lo:#87581a; --blush:#f2c6bf; --wax:#8e1f2e;
   --display:'Great Vibes','Brush Script MT',cursive;
-  --display-ar:'Aref Ruqaa','Amiri','Traditional Arabic',serif;
+  --display-ar:'Noto Nastaliq Urdu','Aref Ruqaa','Amiri',serif;
+  --verse-ar:'Amiri','Traditional Arabic',serif;
   --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
-  --serif-ar:'Amiri','Traditional Arabic',serif;
+  --serif-ar:'El Messiri','Amiri','Traditional Arabic',sans-serif;
   --caps:'Cinzel','Trajan Pro',Georgia,serif;
   color-scheme:light;
 }
@@ -56,7 +57,7 @@ body.ar{font-family:var(--serif-ar)}
 .env-hello .to{font-family:var(--caps); letter-spacing:.3em; font-size:14px; color:var(--ink2)}
 body.ar .env-hello .to{font-family:var(--serif-ar); letter-spacing:0; font-size:20px; font-weight:700}
 .env-hello .nm{font-family:var(--display); font-size:56px; line-height:1.1}
-body.ar .env-hello .nm{font-family:var(--display-ar); font-weight:700; font-size:48px; line-height:1.4}
+body.ar .env-hello .nm{font-family:var(--display-ar); font-weight:700; font-size:40px; line-height:1.3; padding:.6em .4em .9em; margin:-.5em 0 -.8em}
 .envelope{position:relative; width:min(340px, 86vw); aspect-ratio:3/2; perspective:1200px; cursor:pointer; filter:drop-shadow(0 22px 30px rgba(120,80,20,.28));
   animation:bob 3.2s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(-8px)}}
@@ -65,7 +66,7 @@ body.ar .env-hello .nm{font-family:var(--display-ar); font-weight:700; font-size
   display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding-top:9%; text-align:center; gap:2px;
   transition:transform 1.3s cubic-bezier(.2,.8,.2,1) .55s; z-index:1}
 .letter .l1{font-family:var(--display); font-size:36px; line-height:1}
-body.ar .letter .l1{font-family:var(--display-ar); font-weight:700; font-size:30px; line-height:1.5}
+body.ar .letter .l1{font-family:var(--display-ar); font-weight:700; font-size:24px; line-height:1.3; padding:.5em .3em .8em; margin:-.5em 0 -.6em}
 .letter .l2{font-family:var(--caps); font-size:12px; letter-spacing:.25em; color:var(--ink2)}
 body.ar .letter .l2{font-family:var(--serif-ar); letter-spacing:0; font-size:16px; font-weight:700}
 .env-front{position:absolute; inset:0; z-index:2; border-radius:8px; pointer-events:none;
@@ -108,7 +109,7 @@ main{max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:84
 section{display:flex; flex-direction:column; align-items:center; text-align:center; gap:18px}
 .cross{width:54px; height:68px; filter:drop-shadow(0 0 14px rgba(255,205,120,.9))}
 .verse{font-style:italic; font-weight:600; font-size:22px; line-height:1.45; color:var(--ink2); max-width:30ch; text-wrap:balance}
-body.ar .verse{font-style:normal; font-weight:700; font-size:23px}
+body.ar .verse{font-family:var(--verse-ar); font-style:normal; font-weight:700; font-size:23px}
 .ref{display:block; font-family:var(--caps); font-style:normal; font-size:12px; letter-spacing:.3em; color:var(--gold); margin-top:4px}
 body.ar .ref{font-family:var(--serif-ar); letter-spacing:0; font-size:17px}
 
@@ -135,7 +136,7 @@ main{overflow-x:clip}
 body.ar .invite{font-style:normal; font-weight:700; font-size:22px; line-height:1.7}
 .names{display:flex; flex-direction:column; align-items:center; line-height:1}
 .names .n{font-family:var(--display); font-size:clamp(72px, 19vw, 112px); line-height:1.05; padding:0 .15em}
-body.ar .names .n{font-family:var(--display-ar); font-weight:700; font-size:clamp(64px, 17vw, 96px); line-height:1.35}
+body.ar .names .n{font-family:var(--display-ar); font-weight:700; font-size:clamp(50px, 13vw, 70px); line-height:1.3; padding:.7em .35em 1em; margin:-.6em 0 -.85em}
 .names .rings{width:70px; height:50px; margin:-4px 0}
 .datebar{display:flex; align-items:center; gap:14px; font-family:var(--caps); font-weight:700; letter-spacing:.2em; font-size:15px; color:var(--ink2)}
 .datebar b{font-family:var(--serif); font-size:30px; letter-spacing:.05em; color:var(--ink)}
@@ -145,7 +146,7 @@ body.ar .datebar b{font-family:var(--serif-ar); font-size:28px}
 
 /* section titles */
 .h{font-family:var(--display); font-size:56px; line-height:1.1}
-body.ar .h{font-family:var(--display-ar); font-weight:700; font-size:44px; line-height:1.5}
+body.ar .h{font-family:var(--display-ar); font-weight:700; font-size:32px; line-height:1.3; padding:.6em .3em .9em; margin:-.6em 0 -.8em}
 .orn{width:220px; height:22px}
 
 /* countdown */
@@ -165,7 +166,7 @@ body.ar .cell .u{font-family:var(--serif-ar); letter-spacing:0; font-size:16px; 
 .band::before{top:12px; left:12px; border-right:0; border-bottom:0; border-radius:10px 0 0 0}
 .band::after{bottom:12px; right:12px; border-left:0; border-top:0; border-radius:0 0 10px 0}
 .band .big{font-family:var(--display); font-size:44px; line-height:1.2; text-wrap:balance}
-body.ar .band .big{font-family:var(--display-ar); font-weight:700; font-size:38px; line-height:1.6}
+body.ar .band .big{font-family:var(--display-ar); font-weight:700; font-size:28px; line-height:2.1; padding:.4em .2em .6em}
 
 /* gallery */
 .gallery{display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x mandatory; width:calc(100% + 32px); margin-inline:-16px; padding:20px 16px 26px; scrollbar-width:none}
@@ -175,7 +176,7 @@ body.ar .band .big{font-family:var(--display-ar); font-weight:700; font-size:38p
 .pol .im{aspect-ratio:4/5; overflow:hidden; border-radius:2px}
 .pol img{width:100%; height:100%; object-fit:cover; animation:kb 14s ease-in-out infinite alternate}
 .pol p{font-family:var(--display); font-size:26px; color:var(--ink2); margin-top:8px; line-height:1}
-body.ar .pol p{font-family:var(--display-ar); font-size:22px; line-height:1.5}
+body.ar .pol p{font-family:var(--display-ar); font-size:17px; line-height:2.2}
 .swipe{font-family:var(--caps); font-size:11px; letter-spacing:.3em; color:var(--gold)}
 body.ar .swipe{font-family:var(--serif-ar); letter-spacing:0; font-size:15px}
 
@@ -210,7 +211,7 @@ body.ar .btn{font-family:var(--serif-ar); letter-spacing:0; font-size:17px}
 .btn svg{width:18px; height:18px; flex:none}
 
 .final .thanks{font-family:var(--display); font-size:52px; line-height:1.15}
-body.ar .final .thanks{font-family:var(--display-ar); font-weight:700; font-size:44px; line-height:1.5}
+body.ar .final .thanks{font-family:var(--display-ar); font-weight:700; font-size:28px; line-height:2.2; padding:.3em .2em .5em}
 .final .sig{font-family:var(--caps); letter-spacing:.3em; font-size:13px; color:var(--ink2)}
 body.ar .final .sig{font-family:var(--serif-ar); letter-spacing:0; font-size:18px; font-weight:700}
 .heart{width:46px; height:46px; animation:beat 1.4s ease-in-out infinite}
@@ -221,6 +222,28 @@ body.ar .final .sig{font-family:var(--serif-ar); letter-spacing:0; font-size:18p
 .rv{transition:opacity 1s ease, transform 1s cubic-bezier(.2,.8,.2,1)}
 .hero-in .h-item{animation:rise 1.2s cubic-bezier(.2,.8,.2,1) both}
 @keyframes rise{from{opacity:0; transform:translateY(26px)}}
+.hero-in .names .n{animation:writeL 2.2s cubic-bezier(.6,.1,.3,1) both}
+.hero-in .names .n:last-child{animation-delay:1.3s}
+.hero-in.ar .names .n{animation-name:writeR}
+@keyframes writeL{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes writeR{from{clip-path:inset(0 0 0 100%)}to{clip-path:inset(0 0 0 0)}}
+.hero-in .names .rings{animation:ringPop 1s 1s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes ringPop{from{transform:scale(0) rotate(-90deg); opacity:0}}
+.ph{will-change:transform}
+.bigrings{width:190px; height:116px; overflow:visible}
+.bigrings .r1,.bigrings .r2{stroke-dasharray:300; stroke-dashoffset:0}
+#story.play .bigrings .r1{animation:draw 2s ease both}
+#story.play .bigrings .r2{animation:draw 2s .6s ease both}
+#story.play .bigrings .gem{animation:gem 1s 2.4s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes draw{from{stroke-dashoffset:300}}
+@keyframes gem{from{transform:scale(0); opacity:0}}
+.bigrings .gem{transform-origin:center; transform-box:fill-box}
+.story{font-style:italic; font-weight:600; font-size:22px; line-height:1.8; max-width:32ch; min-height:7.2em; text-wrap:pretty}
+body.ar .story{font-family:var(--serif-ar); font-style:normal; font-weight:500; font-size:21px; line-height:2}
+.story .cur{display:inline-block; width:2px; height:1.1em; margin-inline:2px; background:var(--gold); vertical-align:middle; animation:blink .8s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.cell:last-child{animation:glow 1s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:inset 0 0 0 4px var(--paper), inset 0 0 0 5px rgba(185,138,60,.4), 0 0 22px rgba(255,196,110,.55)}}
 
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation:none!important; transition:none!important}
@@ -293,6 +316,14 @@ body.ar .final .sig{font-family:var(--serif-ar); letter-spacing:0; font-size:18p
     </div>
   </section>
 
+  <!-- our story -->
+  <section class="rv" id="story">
+    <svg class="bigrings" viewBox="0 0 200 120" id="bigRings"></svg>
+    <h2 class="h gold" data-t="storyTitle"></h2>
+    <span class="ref" data-t="storyRef"></span>
+    <p class="story" id="storyText"></p>
+  </section>
+
   <!-- gallery -->
   <section class="rv">
     <h2 class="h gold" data-t="galleryTitle"></h2>
@@ -302,6 +333,7 @@ body.ar .final .sig{font-family:var(--serif-ar); letter-spacing:0; font-size:18p
       <figure class="pol" style="--r:2.5deg"><div class="im"><img src="img/g2.jpg" alt="" loading="lazy"></div><p data-t="cap2"></p></figure>
       <figure class="pol" style="--r:-2deg"><div class="im"><img src="img/g3.jpg" alt="" loading="lazy"></div><p data-t="cap3"></p></figure>
       <figure class="pol" style="--r:3deg"><div class="im"><img src="img/g4.jpg" alt="" loading="lazy"></div><p data-t="cap4"></p></figure>
+      <figure class="pol" style="--r:-2.5deg"><div class="im"><img src="img/g5.jpg" alt="" loading="lazy"></div><p data-t="cap5"></p></figure>
     </div>
     <span class="swipe" data-t="swipe"></span>
   </section>
@@ -339,7 +371,7 @@ body.ar .final .sig{font-family:var(--serif-ar); letter-spacing:0; font-size:18p
   </section>
 
   <!-- closing -->
-  <section class="final rv">
+  <section class="final rv" id="final">
     <svg class="heart" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3.1 4.5 6.8 4.5c2.1 0 3.7 1.2 5.2 3 1.5-1.8 3.1-3 5.2-3 3.7 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z" fill="#c9737a"/></svg>
     <p class="thanks gold" data-t="thanks"></p>
     <p class="verse" style="font-size:20px"><span data-t="verse3"></span><span class="ref" data-t="ref3"></span></p>
@@ -357,30 +389,35 @@ const LINKS = {
 const WEDDING = new Date('2026-11-21T17:00:00+02:00');   // church, Cairo time
 /* ======================================================================= */
 
+const ZW='‌';
 const T = {
- ar:{toLoved:'إلى أحبائنا', couple:'جون و يوستينا', dateShort:'٢١ . ١١ . ٢٠٢٦', tap:'اضغط لفتح الدعوة',
-   verse1:'«هذا هو اليوم الذي صنعه الربّ، نبتهج ونفرح فيه»', ref1:'(مز ١١٨ : ٢٤)',
-   invite:'بنعمة الله نتشرّف بدعوتكم لحضور صلاة الإكليل المقدّس ومشاركتنا فرحة زفاف',
-   n1:'جون', n2:'يوستينا', join:'شاركونا بداية حياتنا الجديدة معًا', dow:'السبت', date:'٢١ نوفمبر ٢٠٢٦',
-   countTitle:'باقي على فرحتنا', days:'يوم', hours:'ساعة', mins:'دقيقة', secs:'ثانية', today:'النهارده فرحتنا!',
+ ar:{toLoved:'إلى أحبائنا الغاليين', couple:'جون'+ZW+' و '+ZW+'يوستينا', dateShort:'٢١ / ١١ / ٢٠٢٦', tap:'المس الختم لفتح الدعوة',
+   verse1:'«هذا هو اليوم الذي صنعه الربّ، نفرح ونبتهج فيه»', ref1:'(مز ١١٨ : ٢٤)',
+   invite:'بنعمة الله وبقلوبٍ يملؤها الفرح، يسرّنا ويشرّفنا دعوتكم لحضور صلاة الإكليل المقدّس',
+   n1:'جون', n2:'يوستينا', join:'لتشاركونا بداية حياتنا الجديدة معًا', dow:'بمشيئة الربّ، يوم السبت', date:'٢١ نوفمبر ٢٠٢٦',
+   countTitle:'على موعدٍ مع الفرح', days:'يوم', hours:'ساعة', mins:'دقيقة', secs:'ثانية', today:'اليوم يوم فرحتنا!',
    verse2:'«ما جمعه الله لا يفرّقه إنسان»', ref2:'(مت ١٩ : ٦)',
-   galleryTitle:'لحظات من حكايتنا', cap1:'بداية العمر', cap2:'معًا', cap3:'الدبلة', cap4:'لحبيبي', swipe:'اسحب لمشاهدة الصور ←',
-   eventsTitle:'مواعيد الفرح',
-   churchLbl:'صلاة الإكليل', churchTime:'الخامسة مساءً', churchPlace:'كنيسة السيدة العذراء', churchArea:'أرض الجولف – مصر الجديدة',
+   storyTitle:'«وجدتُ من تحبّه نفسي»', storyRef:'(نش ٣ : ٤)',
+   story:'في كل خطوة كان الله يرتّب لنا الطريق، حتى التقى قلبانا وصار حلمنا واحدًا. واليوم نبدأ معًا رحلة العمر، ويسعدنا أن تكونوا جزءًا من فرحتنا.',
+   galleryTitle:'لحظات من حكايتنا', cap1:'يدًا بيد', cap2:'حكاية بدأت بابتسامة', cap3:'فرحة العمر', cap4:'وعدٌ للأبد', cap5:'معًا دائمًا', swipe:'اسحب لمشاهدة المزيد ←',
+   eventsTitle:'موعدنا',
+   churchLbl:'صلاة الإكليل المقدّس', churchTime:'الخامسة مساءً', churchPlace:'كنيسة السيدة العذراء', churchArea:'أرض الجولف – مصر الجديدة',
    hallLbl:'حفل الزفاف', hallTime:'السابعة مساءً', hallPlace:'قاعة لاسيلا', hallArea:'فندق دار المركبات',
-   mapBtn:'افتح الموقع على الخريطة', calBtn:'أضف للتقويم', mapTag:'خريطة توضيحية',
-   thanks:'حضوركم يُكمل فرحتنا', verse3:'«أنا لحبيبي وحبيبي لي»', ref3:'(نش ٦ : ٣)', sig:'جون و يوستينا · ٢١ . ١١ . ٢٠٢٦'},
- en:{toLoved:'TO OUR BELOVED', couple:'John & Youstina', dateShort:'21 · 11 · 2026', tap:'TAP TO OPEN',
+   mapBtn:'افتح الموقع على الخريطة', calBtn:'أضف إلى التقويم', mapTag:'',
+   thanks:'حضوركم بركةٌ لنا، وبكم تكتمل فرحتنا', verse3:'«أنا لحبيبي وحبيبي لي»', ref3:'(نش ٦ : ٣)', sig:'جون و يوستينا  |  ٢١ / ١١ / ٢٠٢٦'},
+ en:{toLoved:'TO OUR BELOVED', couple:'John & Youstina', dateShort:'21 · 11 · 2026', tap:'TOUCH THE SEAL TO OPEN',
    verse1:'“This is the day the Lord has made; we will rejoice and be glad in it”', ref1:'PSALM 118 : 24',
    invite:'Together with our families, we cordially invite you to celebrate the wedding of',
    n1:'John', n2:'Youstina', join:'Join us to witness the beginning of our new life together', dow:'SATURDAY', date:'21 · 11 · 2026',
-   countTitle:'Counting down to our day', days:'DAYS', hours:'HOURS', mins:'MINUTES', secs:'SECONDS', today:'Today is our day!',
+   countTitle:'Counting down to forever', days:'DAYS', hours:'HOURS', mins:'MINUTES', secs:'SECONDS', today:'Today is our day!',
    verse2:'“What God has joined together, let no one separate”', ref2:'MATTHEW 19 : 6',
-   galleryTitle:'Moments of our story', cap1:'Forever begins', cap2:'Together', cap3:'The rings', cap4:'My beloved', swipe:'SWIPE FOR MORE →',
+   storyTitle:'“I have found the one my soul loves”', storyRef:'SONG OF SONGS 3 : 4',
+   story:'Every step of the way, God was preparing the path for us, until our hearts met and our dreams became one. Today we begin the journey of a lifetime together, and we would love you to be part of our joy.',
+   galleryTitle:'Moments of our story', cap1:'Hand in hand', cap2:'Where it all began', cap3:'The joy of a lifetime', cap4:'A promise forever', cap5:'Always together', swipe:'SWIPE FOR MORE →',
    eventsTitle:'The Celebration',
    churchLbl:'HOLY MATRIMONY', churchTime:'5:00 PM', churchPlace:'Church of the Virgin Mary', churchArea:'Ard El Golf, Heliopolis',
    hallLbl:'RECEPTION', hallTime:'7:00 PM', hallPlace:'La Sila Hall', hallArea:'Dar El Markabat Hotel',
-   mapBtn:'OPEN IN GOOGLE MAPS', calBtn:'ADD TO CALENDAR', mapTag:'ILLUSTRATIVE MAP',
+   mapBtn:'OPEN IN GOOGLE MAPS', calBtn:'ADD TO CALENDAR', mapTag:'',
    thanks:'Your presence will make our joy complete', verse3:'“I am my beloved’s, and my beloved is mine”', ref3:'SONG OF SONGS 6 : 3', sig:'JOHN & YOUSTINA · 21 · 11 · 2026'}
 };
 
@@ -399,6 +436,7 @@ function applyLang(){
   document.getElementById('langBtn').textContent = lang==='ar' ? 'EN' : 'ع';
   document.getElementById('env').setAttribute('aria-label', d.tap);
   tickCountdown(true);
+  if(typeof setStory==='function') setStory(false);
 }
 document.getElementById('langBtn').addEventListener('click',()=>{ lang = lang==='ar'?'en':'ar'; applyLang(); });
 
@@ -506,10 +544,74 @@ function frame(){
     if(p.burst){ p.vy+=.25*DPR; p.vx*=.985; }
     drawPetal(p);
     if(p.y>H+30*DPR || p.x<-60*DPR || p.x>W+60*DPR){ if(p.burst){ petals.splice(i,1);} else { Object.assign(p, petal()); } } }
+  extraFx();
   requestAnimationFrame(frame);
 }
 if(!matchMedia('(prefers-reduced-motion: reduce)').matches) requestAnimationFrame(frame);
 function burst(){ for(let i=0;i<70;i++) petals.push(petal(W/2,H*.45,true)); }
+
+/* ---------- floating hearts + gold dust trail ---------- */
+const hearts=[], dust=[]; let lastHeart=0;
+function heartPath(c,s){ c.beginPath(); c.moveTo(0,s*.35); c.bezierCurveTo(-s*1.1,-s*.35,-s*.45,-s*1.05,0,-s*.45); c.bezierCurveTo(s*.45,-s*1.05,s*1.1,-s*.35,0,s*.35); c.fill(); }
+function addHeart(x,y,big){ hearts.push({x:x??(Math.random()*W), y:y??(H+20*DPR), s:(big?10+Math.random()*12:6+Math.random()*8)*DPR,
+  vy:-(big?2.2+Math.random()*3:.7+Math.random()*.8)*DPR, vx:big?(Math.random()-.5)*6*DPR:0, sw:Math.random()*6.28, life:1,
+  c:['#e8848c','#f2a7ac','#d9666f','#f6c0c0','#e7b25a'][Math.random()*5|0], big}); }
+function heartBurst(n){ for(let i=0;i<n;i++) addHeart(W/2+(Math.random()-.5)*W*.5, H*.75, true); }
+function extraFx(){
+  const now=performance.now();
+  if(now-lastHeart>1600){ lastHeart=now; addHeart(); }
+  for(let i=hearts.length-1;i>=0;i--){ const h=hearts[i]; h.sw+=.03; h.y+=h.vy; h.x+=h.vx+Math.sin(h.sw)*.5*DPR;
+    if(h.big){ h.vx*=.98; h.life-=.008; } else if(h.y<H*.35) h.life-=.012;
+    cx.save(); cx.translate(h.x,h.y); cx.globalAlpha=Math.max(0,h.life)*.8; cx.fillStyle=h.c; heartPath(cx,h.s); cx.restore();
+    if(h.life<=0||h.y<-30*DPR) hearts.splice(i,1); }
+  for(let i=dust.length-1;i>=0;i--){ const d=dust[i]; d.x+=d.vx; d.y+=d.vy; d.vy+=.03*DPR; d.life-=.025;
+    cx.globalAlpha=Math.max(0,d.life); cx.fillStyle=d.c; cx.beginPath(); cx.arc(d.x,d.y,d.r*Math.max(0,d.life)+.5,0,6.28); cx.fill();
+    if(d.life<=0) dust.splice(i,1); }
+  cx.globalAlpha=1;
+}
+function trail(e){ const t=e.touches?e.touches[0]:e; if(!t) return;
+  for(let i=0;i<3;i++) dust.push({x:t.clientX*DPR, y:t.clientY*DPR, vx:(Math.random()-.5)*1.6*DPR, vy:(Math.random()-.8)*1.6*DPR, r:(1.5+Math.random()*2.5)*DPR, life:1,
+    c:['#f3d27e','#e7b25a','#fff1c4','#f2a7ac'][Math.random()*4|0]}); }
+addEventListener('pointermove',trail,{passive:true});
+addEventListener('touchmove',trail,{passive:true});
+addEventListener('pointerdown',e=>{ if(opened) for(let i=0;i<4;i++) addHeart(e.clientX*DPR,e.clientY*DPR,true); },{passive:true});
+
+/* ---------- parallax on the hero photo ---------- */
+const ph=document.querySelector('.arch .ph');
+addEventListener('scroll',()=>{ const y=scrollY; if(y<900) ph.style.transform=`translateY(${y*.08}px) scale(${1+y*.0002})`; },{passive:true});
+
+/* ---------- our story: rings + typewriter ---------- */
+document.getElementById('bigRings').innerHTML=`<defs><linearGradient id="brg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbe6a6"/><stop offset=".35" stop-color="#d8aa52"/><stop offset=".6" stop-color="#9a6a1f"/><stop offset="1" stop-color="#e7c477"/></linearGradient></defs>
+ <circle class="r1" cx="78" cy="68" r="44" fill="none" stroke="url(#brg)" stroke-width="7" stroke-linecap="round" transform="rotate(-90 78 68)"/>
+ <circle class="r2" cx="122" cy="68" r="44" fill="none" stroke="url(#brg)" stroke-width="7" stroke-linecap="round" transform="rotate(90 122 68)"/>
+ <path class="gem" d="M122 10 l11 13 -11 13 -11 -13z" fill="#fff6d6" stroke="#c9a052" stroke-width="2"/>`;
+let typing=null;
+function setStory(animate){
+  const el=document.getElementById('storyText'), txt=T[lang].story; clearInterval(typing);
+  if(!animate || matchMedia('(prefers-reduced-motion: reduce)').matches){ el.textContent=txt; return; }
+  let i=0; el.innerHTML='<span></span><i class="cur"></i>'; const sp=el.firstChild;
+  typing=setInterval(()=>{ i+=1; sp.textContent=txt.slice(0,i);
+    if(i>=txt.length){ clearInterval(typing); setTimeout(()=>{ const c=el.querySelector('.cur'); if(c) c.remove(); },1800); } }, lang==='ar'?45:32);
+}
+setStory(false);
+const fxObs='IntersectionObserver' in window ? new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  if(e.target.id==='story'){ e.target.classList.add('play'); setStory(true); }
+  if(e.target.id==='final'){ heartBurst(46); }
+  if(e.target.id==='count'){ burst(); }
+  fxObs.unobserve(e.target);
+}),{threshold:.45}) : null;
+if(fxObs) ['story','final','count'].forEach(id=>{ const el=document.getElementById(id); if(el) fxObs.observe(el); });
+
+/* ---------- gallery drifts on its own until touched ---------- */
+(function(){
+  const g=document.getElementById('gallery'); let touched=false, idx=0, visible=false;
+  ['pointerdown','touchstart','wheel'].forEach(ev=>g.addEventListener(ev,()=>{ touched=true; },{passive:true}));
+  if('IntersectionObserver' in window) new IntersectionObserver(es=>{ visible=es[0].intersectionRatio>.6; },{threshold:[0,.6,1]}).observe(g);
+  setInterval(()=>{ if(touched||!visible) return; const items=g.querySelectorAll('.pol'); idx=(idx+1)%items.length;
+    const it=items[idx]; g.scrollTo({left: it.offsetLeft - (g.clientWidth-it.clientWidth)/2, behavior:'smooth'}); }, 3200);
+})();
+
 
 /* ---------- music box: Pachelbel's Canon in D (public domain), synthesized ---------- */
 let AC=null, master=null, playing=false, timer=null, nextT=0, step=0;
@@ -560,7 +662,7 @@ function openInvite(){
   document.getElementById('env').classList.add('open');
   startMusic();
   setTimeout(burst, 700);
-  setTimeout(()=>{ document.getElementById('intro').classList.add('gone'); document.getElementById('hero').classList.add('hero-in'); burst(); }, 2100);
+  setTimeout(()=>{ document.getElementById('intro').classList.add('gone'); document.getElementById('hero').classList.add('hero-in'); if(lang==='ar') document.getElementById('hero').classList.add('ar'); burst(); }, 2100);
   setTimeout(()=>{ document.getElementById('intro').hidden=true; }, 3300);
 }
 document.getElementById('env').addEventListener('click',openInvite);
