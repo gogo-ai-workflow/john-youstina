@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fbf4e8">
+<meta name="description" content="جون و يوستينا · السبت ٢١ نوفمبر ٢٠٢٦ · دعوتكم لمشاركتنا فرحتنا">
+<meta property="og:type" content="website">
+<meta property="og:title" content="جون و يوستينا · John &amp; Youstina">
+<meta property="og:description" content="السبت ٢١ نوفمبر ٢٠٢٦ — حضوركم يُكمل فرحتنا">
+<meta property="og:image" content="https://gogo-ai-workflow.github.io/john-youstina/img/hero.jpg">
+<meta property="og:url" content="https://gogo-ai-workflow.github.io/john-youstina/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%8D%3C/text%3E%3C/svg%3E">
+<style>*,*::before,*::after{box-sizing:border-box} body{margin:0} img{max-width:100%} [hidden]{display:none!important} p,h2,figure{margin:0}</style>
+<title>John & Youstina</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: one centered "invitation column" (max 600px) that scrolls like an unfolding card; ivory paper, gold foil, blush petals. Deliberately single (light) theme, like a printed invitation. */
+:root{
+  --paper:#fbf4e8; --paper2:#f3e4c8; --ink:#4f321a; --ink2:#7a5530;
+  --gold:#b98a3c; --gold-hi:#f3dc9b; --gold-lo:#87581a; --blush:#f2c6bf; --wax:#8e1f2e;
+  --display:'Great Vibes','Brush Script MT',cursive;
+  --display-ar:'Aref Ruqaa','Amiri','Traditional Arabic',serif;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --serif-ar:'Amiri','Traditional Arabic',serif;
+  --caps:'Cinzel','Trajan Pro',Georgia,serif;
+  color-scheme:light;
+}
+html{scroll-behavior:smooth}
+body{background:var(--paper); color:var(--ink); font-family:var(--serif); font-size:20px; line-height:1.5; overflow-x:hidden;
+  padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px));
+  background-image:
+    radial-gradient(ellipse 80% 40% at 50% 0%, rgba(255,222,150,.55), transparent 70%),
+    radial-gradient(ellipse 60% 30% at 50% 100%, rgba(242,198,191,.35), transparent 70%);
+  background-attachment:fixed;}
+body.ar{font-family:var(--serif-ar)}
+.gold{background:linear-gradient(100deg,var(--gold-lo) 0%,var(--gold) 22%,var(--gold-hi) 40%,var(--gold) 58%,var(--gold-lo) 78%,var(--gold) 100%);
+  background-size:250% 100%; -webkit-background-clip:text; background-clip:text; color:transparent;
+  animation:shimmer 6s linear infinite}
+@keyframes shimmer{to{background-position:-250% 0}}
+
+/* ---------- canvas (petals) ---------- */
+#fx{position:fixed; inset:0; width:100%; height:100%; pointer-events:none; z-index:30}
+
+/* ---------- envelope intro ---------- */
+#intro{position:fixed; inset:0; z-index:50; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:28px;
+  background:radial-gradient(ellipse at 50% 40%, #fffaf0 0%, #f6e8cf 60%, #ead3ab 100%);
+  padding:max(24px, env(safe-area-inset-top, 0px)) 16px max(24px, env(safe-area-inset-bottom, 0px));
+  transition:opacity 1s ease, transform 1.2s ease}
+#intro.gone{opacity:0; transform:scale(1.15); pointer-events:none}
+.env-hello{text-align:center; display:flex; flex-direction:column; gap:4px}
+.env-hello .to{font-family:var(--caps); letter-spacing:.3em; font-size:14px; color:var(--ink2)}
+body.ar .env-hello .to{font-family:var(--serif-ar); letter-spacing:0; font-size:20px; font-weight:700}
+.env-hello .nm{font-family:var(--display); font-size:56px; line-height:1.1}
+body.ar .env-hello .nm{font-family:var(--display-ar); font-weight:700; font-size:48px; line-height:1.4}
+.envelope{position:relative; width:min(340px, 86vw); aspect-ratio:3/2; perspective:1200px; cursor:pointer; filter:drop-shadow(0 22px 30px rgba(120,80,20,.28));
+  animation:bob 3.2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.env-back{position:absolute; inset:0; border-radius:8px; background:linear-gradient(160deg,#f9eedb,#ecd8b3)}
+.letter{position:absolute; left:6%; right:6%; top:8%; height:84%; border-radius:6px; background:#fffdf7; border:1px solid #e3c98f;
+  display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding-top:9%; text-align:center; gap:2px;
+  transition:transform 1.3s cubic-bezier(.2,.8,.2,1) .55s; z-index:1}
+.letter .l1{font-family:var(--display); font-size:36px; line-height:1}
+body.ar .letter .l1{font-family:var(--display-ar); font-weight:700; font-size:30px; line-height:1.5}
+.letter .l2{font-family:var(--caps); font-size:12px; letter-spacing:.25em; color:var(--ink2)}
+body.ar .letter .l2{font-family:var(--serif-ar); letter-spacing:0; font-size:16px; font-weight:700}
+.env-front{position:absolute; inset:0; z-index:2; border-radius:8px; pointer-events:none;
+  background:
+    linear-gradient(to top right, #f1e0bd 49.6%, transparent 50%) left bottom/50% 100% no-repeat,
+    linear-gradient(to top left, #f1e0bd 49.6%, transparent 50%) right bottom/50% 100% no-repeat,
+    linear-gradient(to top, #f6e9cf 0 52%, transparent 52%)}
+.env-front::after{content:""; position:absolute; inset:6px; border:1px solid rgba(185,138,60,.55); border-radius:5px}
+.flap{position:absolute; left:0; right:0; top:0; height:58%; z-index:3; transform-origin:top center; transition:transform .9s cubic-bezier(.4,.1,.2,1);
+  background:linear-gradient(to bottom, #f3e4c6, #e8d0a2); clip-path:polygon(0 0,100% 0,50% 100%); border-radius:8px 8px 0 0}
+.seal{position:absolute; left:50%; top:58%; width:78px; height:78px; z-index:4; transform:translate(-50%,-50%); transition:transform .5s ease, opacity .5s ease}
+.seal svg{width:100%; height:100%; filter:drop-shadow(0 4px 6px rgba(80,10,20,.35))}
+.envelope.open .seal{transform:translate(-50%,-50%) scale(1.6) rotate(25deg); opacity:0}
+.envelope.open .flap{transform:rotateX(180deg); z-index:0}
+.envelope.open .letter{transform:translateY(-62%); z-index:5}
+.envelope.open{animation:none}
+.tap{font-family:var(--caps); font-size:14px; letter-spacing:.28em; color:var(--ink2); display:flex; align-items:center; gap:10px; animation:pulse 1.8s ease-in-out infinite;
+  background:none; border:0; cursor:pointer; padding:8px 12px}
+body.ar .tap{font-family:var(--serif-ar); letter-spacing:0; font-size:20px; font-weight:700}
+.tap:focus-visible,.btn:focus-visible,.chip:focus-visible,.envelope:focus-visible{outline:2px solid var(--gold); outline-offset:4px}
+@keyframes pulse{50%{opacity:.45}}
+
+/* ---------- floating controls ---------- */
+.chip{position:fixed; z-index:40; width:48px; height:48px; border-radius:50%; border:1.5px solid var(--gold); background:rgba(255,250,240,.88);
+  backdrop-filter:blur(6px); color:var(--gold-lo); display:grid; place-items:center; cursor:pointer; box-shadow:0 6px 18px rgba(120,80,20,.18);
+  font-family:var(--caps); font-weight:700; font-size:15px}
+#musicBtn{bottom:calc(18px + env(safe-area-inset-bottom, 0px)); left:calc(18px + env(safe-area-inset-left, 0px))}
+#langBtn{top:calc(16px + env(safe-area-inset-top, 0px)); right:calc(16px + env(safe-area-inset-right, 0px)); font-family:var(--serif-ar); font-size:20px}
+body.ar #langBtn{font-family:var(--caps); font-size:14px}
+#musicBtn svg{width:22px; height:22px}
+#musicBtn.on .bars i{animation:eq .9s ease-in-out infinite}
+.bars{display:flex; gap:3px; align-items:flex-end; height:18px}
+.bars i{display:block; width:3px; height:6px; background:var(--gold-lo); border-radius:2px}
+.bars i:nth-child(2){animation-delay:.2s!important}.bars i:nth-child(3){animation-delay:.4s!important}.bars i:nth-child(4){animation-delay:.1s!important}
+@keyframes eq{50%{height:18px}}
+#musicBtn:not(.on) .bars i{height:4px}
+
+/* ---------- page ---------- */
+main{max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:84px; padding-block:48px 120px; position:relative; z-index:2}
+section{display:flex; flex-direction:column; align-items:center; text-align:center; gap:18px}
+.cross{width:54px; height:68px; filter:drop-shadow(0 0 14px rgba(255,205,120,.9))}
+.verse{font-style:italic; font-weight:600; font-size:22px; line-height:1.45; color:var(--ink2); max-width:30ch; text-wrap:balance}
+body.ar .verse{font-style:normal; font-weight:700; font-size:23px}
+.ref{display:block; font-family:var(--caps); font-style:normal; font-size:12px; letter-spacing:.3em; color:var(--gold); margin-top:4px}
+body.ar .ref{font-family:var(--serif-ar); letter-spacing:0; font-size:17px}
+
+/* hero arch */
+.arch{position:relative; width:min(420px, 84vw); aspect-ratio:4/5; margin-top:14px}
+.arch .rays{position:absolute; left:50%; top:30%; width:200%; aspect-ratio:1; transform:translate(-50%,-50%); z-index:-1;
+  background:repeating-conic-gradient(rgba(255,214,140,.38) 0deg 3deg, transparent 3deg 12deg);
+  -webkit-mask-image:radial-gradient(circle, #000 0%, rgba(0,0,0,.4) 30%, transparent 58%); mask-image:radial-gradient(circle, #000 0%, rgba(0,0,0,.4) 30%, transparent 58%);
+  animation:spin 80s linear infinite}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.arch .frame{position:absolute; inset:0; border-radius:999px 999px 14px 14px; padding:8px;
+  background:linear-gradient(150deg,var(--gold-hi),var(--gold) 30%,#fff1c4 50%,var(--gold-lo) 75%,var(--gold-hi)); box-shadow:0 28px 60px rgba(120,80,20,.3)}
+.arch .inner{width:100%; height:100%; border-radius:999px 999px 8px 8px; padding:5px; background:var(--paper)}
+.arch .ph{width:100%; height:100%; border-radius:999px 999px 5px 5px; overflow:hidden; position:relative}
+.arch .ph img{width:100%; height:100%; object-fit:cover; object-position:50% 20%; animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.09) translate(-1%,-2%)}}
+.arch .line{position:absolute; inset:-16px; border:1px solid rgba(185,138,60,.6); border-radius:999px 999px 20px 20px; pointer-events:none}
+.arch .flower{position:absolute; width:40%; bottom:-9%; pointer-events:none}
+.arch .flower.l{left:-12%} .arch .flower.r{right:-12%; transform:scaleX(-1)}
+html,body{overflow-x:hidden}
+main{overflow-x:clip}
+
+.invite{font-style:italic; font-weight:600; font-size:21px; line-height:1.4; max-width:28ch; text-wrap:balance}
+body.ar .invite{font-style:normal; font-weight:700; font-size:22px; line-height:1.7}
+.names{display:flex; flex-direction:column; align-items:center; line-height:1}
+.names .n{font-family:var(--display); font-size:clamp(72px, 19vw, 112px); line-height:1.05; padding:0 .15em}
+body.ar .names .n{font-family:var(--display-ar); font-weight:700; font-size:clamp(64px, 17vw, 96px); line-height:1.35}
+.names .rings{width:70px; height:50px; margin:-4px 0}
+.datebar{display:flex; align-items:center; gap:14px; font-family:var(--caps); font-weight:700; letter-spacing:.2em; font-size:15px; color:var(--ink2)}
+.datebar b{font-family:var(--serif); font-size:30px; letter-spacing:.05em; color:var(--ink)}
+body.ar .datebar{font-family:var(--serif-ar); letter-spacing:0; font-size:20px}
+body.ar .datebar b{font-family:var(--serif-ar); font-size:28px}
+.datebar i{display:block; width:46px; height:1.5px; background:var(--gold)}
+
+/* section titles */
+.h{font-family:var(--display); font-size:56px; line-height:1.1}
+body.ar .h{font-family:var(--display-ar); font-weight:700; font-size:44px; line-height:1.5}
+.orn{width:220px; height:22px}
+
+/* countdown */
+.count{display:grid; grid-template-columns:repeat(4, 1fr); gap:10px; width:100%; max-width:440px}
+.cell{border:1.5px solid var(--gold); border-radius:999px 999px 10px 10px; padding:18px 4px 10px; background:linear-gradient(to bottom,#fffaf0,#f7ead2);
+  box-shadow:inset 0 0 0 4px var(--paper), inset 0 0 0 5px rgba(185,138,60,.4)}
+.cell .v{font-family:var(--serif); font-weight:700; font-size:40px; line-height:1; font-variant-numeric:tabular-nums; display:inline-block}
+.cell .v.tick{animation:tick .5s ease}
+@keyframes tick{0%{transform:translateY(-30%); opacity:0}100%{transform:none; opacity:1}}
+.cell .u{font-family:var(--caps); font-size:11px; letter-spacing:.2em; color:var(--ink2); margin-top:6px}
+body.ar .cell .u{font-family:var(--serif-ar); letter-spacing:0; font-size:16px; font-weight:700}
+.done{font-family:var(--display); font-size:44px}
+
+/* big verse band */
+.band{position:relative; padding:44px 22px; border-radius:18px; overflow:hidden; background:linear-gradient(135deg,#fff6e6,#f5e3c4); border:1px solid rgba(185,138,60,.45)}
+.band::before,.band::after{content:""; position:absolute; width:46px; height:46px; border:1.5px solid var(--gold); opacity:.6}
+.band::before{top:12px; left:12px; border-right:0; border-bottom:0; border-radius:10px 0 0 0}
+.band::after{bottom:12px; right:12px; border-left:0; border-top:0; border-radius:0 0 10px 0}
+.band .big{font-family:var(--display); font-size:44px; line-height:1.2; text-wrap:balance}
+body.ar .band .big{font-family:var(--display-ar); font-weight:700; font-size:38px; line-height:1.6}
+
+/* gallery */
+.gallery{display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x mandatory; width:calc(100% + 32px); margin-inline:-16px; padding:20px 16px 26px; scrollbar-width:none}
+.gallery::-webkit-scrollbar{display:none}
+.pol{flex:0 0 68%; max-width:300px; scroll-snap-align:center; background:#fffdf8; padding:10px 10px 14px; border-radius:4px; box-shadow:0 14px 30px rgba(120,80,20,.22); transform:rotate(var(--r)); transition:transform .5s}
+.pol:hover{transform:rotate(0) scale(1.03)}
+.pol .im{aspect-ratio:4/5; overflow:hidden; border-radius:2px}
+.pol img{width:100%; height:100%; object-fit:cover; animation:kb 14s ease-in-out infinite alternate}
+.pol p{font-family:var(--display); font-size:26px; color:var(--ink2); margin-top:8px; line-height:1}
+body.ar .pol p{font-family:var(--display-ar); font-size:22px; line-height:1.5}
+.swipe{font-family:var(--caps); font-size:11px; letter-spacing:.3em; color:var(--gold)}
+body.ar .swipe{font-family:var(--serif-ar); letter-spacing:0; font-size:15px}
+
+/* events */
+.events{display:flex; flex-direction:column; gap:30px; width:100%}
+.ev{position:relative; background:#fffcf5; border:1.5px solid var(--gold); border-radius:220px 220px 18px 18px; padding:40px 22px 24px;
+  box-shadow:0 18px 40px rgba(120,80,20,.14), inset 0 0 0 6px var(--paper), inset 0 0 0 7px rgba(185,138,60,.35); display:flex; flex-direction:column; align-items:center; gap:8px}
+.ev .ic{width:64px; height:64px}
+.ev .lbl{font-family:var(--caps); font-weight:700; font-size:14px; letter-spacing:.3em; color:var(--gold)}
+body.ar .ev .lbl{font-family:var(--serif-ar); letter-spacing:0; font-size:21px}
+.ev .time{font-family:var(--serif); font-weight:700; font-size:44px; line-height:1}
+body.ar .ev .time{font-family:var(--serif-ar); font-size:36px; line-height:1.4}
+.ev .place{font-weight:700; font-size:25px; line-height:1.25}
+.ev .area{font-style:italic; color:var(--ink2); font-size:19px}
+body.ar .ev .area{font-style:normal}
+.map{position:relative; width:100%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; margin-top:8px; border:1px solid rgba(185,138,60,.5); background:#f4ead6}
+.map svg,.map iframe{width:100%; height:100%; display:block; border:0}
+.map .route{stroke-dasharray:8 8; animation:dash 1.4s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-32}}
+.map .pin{animation:drop 2.4s ease-in-out infinite; transform-origin:50% 100%; transform-box:fill-box}
+@keyframes drop{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.map .pulse{animation:ring 2.4s ease-out infinite; transform-origin:center; transform-box:fill-box}
+@keyframes ring{0%{transform:scale(.3); opacity:.9}100%{transform:scale(2.4); opacity:0}}
+.map .tag{position:absolute; left:10px; bottom:8px; font-family:var(--caps); font-size:10px; letter-spacing:.2em; color:var(--ink2); opacity:.75}
+body.ar .map .tag{font-family:var(--serif-ar); letter-spacing:0; font-size:13px; left:auto; right:10px}
+.btns{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:6px}
+.btn{display:inline-flex; align-items:center; gap:8px; padding:12px 20px; border-radius:999px; text-decoration:none; font-family:var(--caps); font-weight:700; font-size:13px; letter-spacing:.12em;
+  color:#fffaf0; background:linear-gradient(135deg,var(--gold-lo),var(--gold) 50%,#caa055); box-shadow:0 8px 18px rgba(135,88,26,.3); transition:transform .2s, box-shadow .2s}
+.btn:hover{transform:translateY(-2px); box-shadow:0 12px 24px rgba(135,88,26,.38)}
+.btn.ghost{background:transparent; color:var(--gold-lo); border:1.5px solid var(--gold); box-shadow:none}
+body.ar .btn{font-family:var(--serif-ar); letter-spacing:0; font-size:17px}
+.btn svg{width:18px; height:18px; flex:none}
+
+.final .thanks{font-family:var(--display); font-size:52px; line-height:1.15}
+body.ar .final .thanks{font-family:var(--display-ar); font-weight:700; font-size:44px; line-height:1.5}
+.final .sig{font-family:var(--caps); letter-spacing:.3em; font-size:13px; color:var(--ink2)}
+body.ar .final .sig{font-family:var(--serif-ar); letter-spacing:0; font-size:18px; font-weight:700}
+.heart{width:46px; height:46px; animation:beat 1.4s ease-in-out infinite}
+@keyframes beat{15%{transform:scale(1.18)}30%{transform:scale(1)}45%{transform:scale(1.12)}60%{transform:scale(1)}}
+
+/* reveal on scroll (content is visible by default; JS only adds the entrance) */
+.rv.pre{opacity:0; transform:translateY(34px) scale(.98)}
+.rv{transition:opacity 1s ease, transform 1s cubic-bezier(.2,.8,.2,1)}
+.hero-in .h-item{animation:rise 1.2s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0; transform:translateY(26px)}}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important; transition:none!important}
+  #fx{display:none}
+}
+</style>
+</head>
+<body>
+
+
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<div id="intro">
+  <div class="env-hello">
+    <span class="to" data-t="toLoved"></span>
+    <span class="nm gold" data-t="couple"></span>
+  </div>
+  <div class="envelope" id="env" role="button" tabindex="0" aria-label="Open the invitation">
+    <div class="env-back"></div>
+    <div class="letter"><span class="l1 gold" data-t="couple"></span><span class="l2" data-t="dateShort"></span></div>
+    <div class="env-front"></div>
+    <div class="flap"></div>
+    <div class="seal"><svg viewBox="-50 -50 100 100" id="sealSvg"></svg></div>
+  </div>
+  <button class="tap" id="tapBtn" type="button"><span data-t="tap"></span></button>
+</div>
+
+<button class="chip" id="langBtn" type="button" aria-label="Language">EN</button>
+<button class="chip" id="musicBtn" type="button" aria-label="Music"><span class="bars"><i></i><i></i><i></i><i></i></span></button>
+
+<main id="main">
+  <!-- hero -->
+  <section id="hero">
+    <svg class="cross h-item" viewBox="-48 -60 96 120" id="cross"></svg>
+    <p class="verse h-item"><span data-t="verse1"></span><span class="ref" data-t="ref1"></span></p>
+    <div class="arch h-item">
+      <div class="rays"></div>
+      <div class="line"></div>
+      <div class="frame"><div class="inner"><div class="ph"><img src="img/hero.jpg" alt="John and Youstina"></div></div></div>
+      <svg class="flower l" viewBox="0 0 300 300" data-bq></svg>
+      <svg class="flower r" viewBox="0 0 300 300" data-bq></svg>
+    </div>
+    <p class="invite h-item" data-t="invite"></p>
+    <div class="names h-item">
+      <span class="n gold" data-t="n1"></span>
+      <svg class="rings" viewBox="0 0 96 70" data-rings></svg>
+      <span class="n gold" data-t="n2"></span>
+    </div>
+    <p class="invite h-item" data-t="join" style="font-size:19px"></p>
+    <div class="datebar h-item"><i></i><span data-t="dow"></span><b data-t="date"></b><i></i></div>
+  </section>
+
+  <!-- countdown -->
+  <section class="rv">
+    <h2 class="h gold" data-t="countTitle"></h2>
+    <svg class="orn" viewBox="0 0 220 22" data-orn></svg>
+    <div class="count" id="count">
+      <div class="cell"><div class="v" id="cd-d">0</div><div class="u" data-t="days"></div></div>
+      <div class="cell"><div class="v" id="cd-h">0</div><div class="u" data-t="hours"></div></div>
+      <div class="cell"><div class="v" id="cd-m">0</div><div class="u" data-t="mins"></div></div>
+      <div class="cell"><div class="v" id="cd-s">0</div><div class="u" data-t="secs"></div></div>
+    </div>
+  </section>
+
+  <!-- verse band -->
+  <section class="rv">
+    <div class="band">
+      <p class="big gold" data-t="verse2"></p>
+      <span class="ref" data-t="ref2"></span>
+    </div>
+  </section>
+
+  <!-- gallery -->
+  <section class="rv">
+    <h2 class="h gold" data-t="galleryTitle"></h2>
+    <svg class="orn" viewBox="0 0 220 22" data-orn></svg>
+    <div class="gallery" id="gallery">
+      <figure class="pol" style="--r:-3deg"><div class="im"><img src="img/g1.jpg" alt="" loading="lazy"></div><p data-t="cap1"></p></figure>
+      <figure class="pol" style="--r:2.5deg"><div class="im"><img src="img/g2.jpg" alt="" loading="lazy"></div><p data-t="cap2"></p></figure>
+      <figure class="pol" style="--r:-2deg"><div class="im"><img src="img/g3.jpg" alt="" loading="lazy"></div><p data-t="cap3"></p></figure>
+      <figure class="pol" style="--r:3deg"><div class="im"><img src="img/g4.jpg" alt="" loading="lazy"></div><p data-t="cap4"></p></figure>
+    </div>
+    <span class="swipe" data-t="swipe"></span>
+  </section>
+
+  <!-- events + locations -->
+  <section class="rv">
+    <h2 class="h gold" data-t="eventsTitle"></h2>
+    <svg class="orn" viewBox="0 0 220 22" data-orn></svg>
+    <div class="events">
+      <article class="ev rv" id="evChurch">
+        <svg class="ic" viewBox="0 0 64 64" id="icChurch"></svg>
+        <div class="lbl" data-t="churchLbl"></div>
+        <div class="time gold" data-t="churchTime"></div>
+        <div class="place" data-t="churchPlace"></div>
+        <div class="area" data-t="churchArea"></div>
+        <div class="map"><iframe id="frameChurch" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Church map"></iframe></div>
+        <div class="btns">
+          <a class="btn" id="mapChurch" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span data-t="mapBtn"></span></a>
+          <a class="btn ghost" id="calChurch" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-t="calBtn"></span></a>
+        </div>
+      </article>
+      <article class="ev rv" id="evHall" hidden>
+        <svg class="ic" viewBox="0 0 64 64" id="icHall"></svg>
+        <div class="lbl" data-t="hallLbl"></div>
+        <div class="time gold" data-t="hallTime"></div>
+        <div class="place" data-t="hallPlace"></div>
+        <div class="area" data-t="hallArea"></div>
+        <div class="map"><iframe id="frameHall" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Hall map"></iframe></div>
+        <div class="btns">
+          <a class="btn" id="mapHall" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span data-t="mapBtn"></span></a>
+          <a class="btn ghost" id="calHall" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-t="calBtn"></span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- closing -->
+  <section class="final rv">
+    <svg class="heart" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3.1 4.5 6.8 4.5c2.1 0 3.7 1.2 5.2 3 1.5-1.8 3.1-3 5.2-3 3.7 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z" fill="#c9737a"/></svg>
+    <p class="thanks gold" data-t="thanks"></p>
+    <p class="verse" style="font-size:20px"><span data-t="verse3"></span><span class="ref" data-t="ref3"></span></p>
+    <span class="sig" data-t="sig"></span>
+  </section>
+</main>
+
+<script>
+/* ================== EDIT HERE: exact Google Maps links ================== */
+const MAPQ = { church:'كنيسة السيدة العذراء أرض الجولف مصر الجديدة', hall:'فندق دار المركبات القاهرة' };
+const LINKS = {
+  church: 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('كنيسة السيدة العذراء أرض الجولف مصر الجديدة'),
+  hall:   'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('فندق دار المركبات القاهرة')
+};
+const WEDDING = new Date('2026-11-21T17:00:00+02:00');   // church, Cairo time
+/* ======================================================================= */
+
+const T = {
+ ar:{toLoved:'إلى أحبائنا', couple:'جون و يوستينا', dateShort:'٢١ . ١١ . ٢٠٢٦', tap:'اضغط لفتح الدعوة',
+   verse1:'«هذا هو اليوم الذي صنعه الربّ، نبتهج ونفرح فيه»', ref1:'(مز ١١٨ : ٢٤)',
+   invite:'بنعمة الله نتشرّف بدعوتكم لحضور صلاة الإكليل المقدّس ومشاركتنا فرحة زفاف',
+   n1:'جون', n2:'يوستينا', join:'شاركونا بداية حياتنا الجديدة معًا', dow:'السبت', date:'٢١ نوفمبر ٢٠٢٦',
+   countTitle:'باقي على فرحتنا', days:'يوم', hours:'ساعة', mins:'دقيقة', secs:'ثانية', today:'النهارده فرحتنا!',
+   verse2:'«ما جمعه الله لا يفرّقه إنسان»', ref2:'(مت ١٩ : ٦)',
+   galleryTitle:'لحظات من حكايتنا', cap1:'بداية العمر', cap2:'معًا', cap3:'الدبلة', cap4:'لحبيبي', swipe:'اسحب لمشاهدة الصور ←',
+   eventsTitle:'مواعيد الفرح',
+   churchLbl:'صلاة الإكليل', churchTime:'الخامسة مساءً', churchPlace:'كنيسة السيدة العذراء', churchArea:'أرض الجولف – مصر الجديدة',
+   hallLbl:'حفل الزفاف', hallTime:'السابعة مساءً', hallPlace:'قاعة لاسيلا', hallArea:'فندق دار المركبات',
+   mapBtn:'افتح الموقع على الخريطة', calBtn:'أضف للتقويم', mapTag:'خريطة توضيحية',
+   thanks:'حضوركم يُكمل فرحتنا', verse3:'«أنا لحبيبي وحبيبي لي»', ref3:'(نش ٦ : ٣)', sig:'جون و يوستينا · ٢١ . ١١ . ٢٠٢٦'},
+ en:{toLoved:'TO OUR BELOVED', couple:'John & Youstina', dateShort:'21 · 11 · 2026', tap:'TAP TO OPEN',
+   verse1:'“This is the day the Lord has made; we will rejoice and be glad in it”', ref1:'PSALM 118 : 24',
+   invite:'Together with our families, we cordially invite you to celebrate the wedding of',
+   n1:'John', n2:'Youstina', join:'Join us to witness the beginning of our new life together', dow:'SATURDAY', date:'21 · 11 · 2026',
+   countTitle:'Counting down to our day', days:'DAYS', hours:'HOURS', mins:'MINUTES', secs:'SECONDS', today:'Today is our day!',
+   verse2:'“What God has joined together, let no one separate”', ref2:'MATTHEW 19 : 6',
+   galleryTitle:'Moments of our story', cap1:'Forever begins', cap2:'Together', cap3:'The rings', cap4:'My beloved', swipe:'SWIPE FOR MORE →',
+   eventsTitle:'The Celebration',
+   churchLbl:'HOLY MATRIMONY', churchTime:'5:00 PM', churchPlace:'Church of the Virgin Mary', churchArea:'Ard El Golf, Heliopolis',
+   hallLbl:'RECEPTION', hallTime:'7:00 PM', hallPlace:'La Sila Hall', hallArea:'Dar El Markabat Hotel',
+   mapBtn:'OPEN IN GOOGLE MAPS', calBtn:'ADD TO CALENDAR', mapTag:'ILLUSTRATIVE MAP',
+   thanks:'Your presence will make our joy complete', verse3:'“I am my beloved’s, and my beloved is mine”', ref3:'SONG OF SONGS 6 : 3', sig:'JOHN & YOUSTINA · 21 · 11 · 2026'}
+};
+
+/* hash options: #hall  #en  #hall-en */
+const opts = location.hash.replace('#','').toLowerCase().split('-');
+let lang = opts.includes('en') ? 'en' : 'ar';
+const showHall = opts.includes('hall');
+document.getElementById('evHall').hidden = !showHall;
+
+function applyLang(){
+  const d = T[lang];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang==='ar' ? 'rtl' : 'ltr';
+  document.body.classList.toggle('ar', lang==='ar');
+  document.querySelectorAll('[data-t]').forEach(el=>{ const v=d[el.dataset.t]; if(v!==undefined) el.textContent=v; });
+  document.getElementById('langBtn').textContent = lang==='ar' ? 'EN' : 'ع';
+  document.getElementById('env').setAttribute('aria-label', d.tap);
+  tickCountdown(true);
+}
+document.getElementById('langBtn').addEventListener('click',()=>{ lang = lang==='ar'?'en':'ar'; applyLang(); });
+
+/* links */
+const gcal = (title, start, end, loc) => 'https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(title)+'&dates='+start+'/'+end+'&location='+encodeURIComponent(loc);
+document.getElementById('mapChurch').href = LINKS.church;
+document.getElementById('mapHall').href = LINKS.hall;
+const embed=q=>'https://maps.google.com/maps?q='+encodeURIComponent(q)+'&hl=ar&z=16&output=embed';
+document.getElementById('frameChurch').src=embed(MAPQ.church);
+document.getElementById('frameHall').src=embed(MAPQ.hall);
+document.getElementById('calChurch').href = gcal('John & Youstina – Holy Matrimony','20261121T150000Z','20261121T170000Z','كنيسة السيدة العذراء، أرض الجولف');
+document.getElementById('calHall').href = gcal('John & Youstina – Wedding Party','20261121T170000Z','20261121T220000Z','قاعة لاسيلا، فندق دار المركبات');
+
+/* ---------- SVG ornaments ---------- */
+const GS=`<stop offset="0" stop-color="#fbe6a6"/><stop offset=".3" stop-color="#d8aa52"/><stop offset=".55" stop-color="#9a6a1f"/><stop offset=".8" stop-color="#e7c477"/><stop offset="1" stop-color="#b8862f"/>`;
+document.getElementById('cross').innerHTML=`<defs><linearGradient id="cg" x1="0" y1="0" x2=".4" y2="1">${GS}</linearGradient></defs>
+ <g fill="url(#cg)" stroke="#7a4f12" stroke-width="1.2"><path d="M-7 -44 h14 v30 h30 v14 h-30 v52 h-14 v-52 h-30 v-14 h30z"/>
+ <circle cx="0" cy="-50" r="8"/><circle cx="-9" cy="-44" r="5"/><circle cx="9" cy="-44" r="5"/>
+ <circle cx="-41" cy="-7" r="8"/><circle cx="-35" cy="-16" r="5"/><circle cx="-35" cy="2" r="5"/>
+ <circle cx="41" cy="-7" r="8"/><circle cx="35" cy="-16" r="5"/><circle cx="35" cy="2" r="5"/>
+ <circle cx="0" cy="58" r="8"/><circle cx="-9" cy="52" r="5"/><circle cx="9" cy="52" r="5"/><circle cx="0" cy="-7" r="9"/></g><circle cx="0" cy="-7" r="4" fill="#fff4cf"/>`;
+document.querySelectorAll('[data-rings]').forEach(s=>s.innerHTML=`<defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1">${GS}</linearGradient></defs>
+ <g fill="none" stroke="url(#rg)" stroke-width="6"><ellipse cx="36" cy="40" rx="22" ry="20"/><ellipse cx="60" cy="40" rx="22" ry="20"/></g><path d="M60 6 l5 8 -5 7 -5 -7z" fill="#fff6d6" stroke="#c9a052"/>`);
+document.querySelectorAll('[data-orn]').forEach(s=>s.innerHTML=`<g fill="none" stroke="#b98a3c" stroke-width="1.4"><path d="M6 11 H82"/><path d="M138 11 H214"/>
+ <path d="M82 11 C94 1 104 1 110 11 C104 21 94 21 82 11Z"/><path d="M138 11 C126 1 116 1 110 11 C116 21 126 21 138 11Z"/></g><path d="M110 3 L116 11 L110 19 L104 11Z" fill="#b98a3c"/>`);
+document.getElementById('sealSvg').innerHTML=`<defs><radialGradient id="wx" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#c2414f"/><stop offset=".6" stop-color="#8e1f2e"/><stop offset="1" stop-color="#5c0f1b"/></radialGradient>
+ <linearGradient id="sg" x1="0" y1="0" x2="1" y2="1">${GS}</linearGradient></defs>
+ <path d="M0 -46 C14 -48 22 -40 32 -36 C44 -30 46 -18 46 -4 C48 12 42 22 34 32 C24 44 12 46 0 46 C-14 48 -26 42 -34 34 C-44 24 -48 10 -46 -4 C-46 -18 -40 -30 -30 -38 C-20 -44 -12 -46 0 -46Z" fill="url(#wx)"/>
+ <circle r="33" fill="none" stroke="#6b1220" stroke-width="2.5" opacity=".7"/><circle r="29" fill="none" stroke="url(#sg)" stroke-width="1.2"/>
+ <g fill="url(#sg)"><rect x="-3.5" y="-22" width="7" height="44" rx="2"/><rect x="-18" y="-8" width="36" height="7" rx="2"/>
+ <circle cy="-24" r="4"/><circle cy="24" r="4"/><circle cx="-20" cy="-4.5" r="4"/><circle cx="20" cy="-4.5" r="4"/></g>`;
+
+/* church / hall icons */
+document.getElementById('icChurch').innerHTML=`<defs><linearGradient id="ig1" x1="0" y1="0" x2=".4" y2="1">${GS}</linearGradient></defs><g fill="url(#ig1)">
+ <rect x="30" y="2" width="4" height="14"/><rect x="25" y="6" width="14" height="4"/><path d="M18 34 Q18 16 32 16 Q46 16 46 34Z"/><rect x="14" y="34" width="36" height="26"/><rect x="5" y="42" width="10" height="18"/><rect x="49" y="42" width="10" height="18"/></g>
+ <path d="M27 60 V48 Q32 42 37 48 V60Z" fill="#fffcf5"/>`;
+document.getElementById('icHall').innerHTML=`<defs><linearGradient id="ig2" x1="0" y1="0" x2=".4" y2="1">${GS}</linearGradient></defs>
+ <g fill="none" stroke="url(#ig2)" stroke-width="3.5"><path d="M12 8 h40"/><path d="M32 8 v8"/><path d="M10 26 Q32 40 54 26"/><path d="M17 28 v7 M32 33 v7 M47 28 v7"/></g>
+ <g fill="url(#ig2)"><circle cx="32" cy="17" r="4.5"/>${[17,32,47].map(x=>`<path d="M${x} ${x==32?40:35} l-4 7 h8z"/><circle cx="${x}" cy="${x==32?51:46}" r="3.5"/>`).join('')}</g>`;
+
+/* illustrative mini maps with animated route + pin */
+document.querySelectorAll('[data-map]').forEach((s,i)=>{
+  const alt=i===1;
+  s.innerHTML=`<rect width="320" height="180" fill="#f4ead6"/>
+   <g fill="#e3ecd0"><rect x="${alt?190:20}" y="${alt?20:110}" width="90" height="50" rx="10"/><circle cx="${alt?60:250}" cy="${alt?140:40}" r="26"/></g>
+   ${alt?'<path d="M-10 60 C80 40 140 90 330 70" stroke="#cfe0ea" stroke-width="16" fill="none"/>':''}
+   <g stroke="#fffaf0" stroke-width="10" fill="none" stroke-linecap="round"><path d="M0 ${alt?120:90} H320"/><path d="M${alt?120:160} 0 V180"/><path d="M0 30 L320 150"/><path d="M${alt?250:60} 0 V180"/></g>
+   <g stroke="#e8d7b6" stroke-width="1.2" fill="none"><path d="M0 ${alt?120:90} H320"/><path d="M${alt?120:160} 0 V180"/></g>
+   <path class="route" d="M20 160 C80 150 ${alt?'90 120 120 120 C170 120 190 100 ':'120 100 160 92 C200 84 '}${alt?'205 78':'206 70'}" stroke="#b98a3c" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+   <circle cx="20" cy="160" r="5" fill="#7a5530"/>
+   <circle class="pulse" cx="${alt?205:206}" cy="${alt?78:70}" r="14" fill="#c9737a" opacity=".5"/>
+   <g class="pin"><path d="M${alt?205:206} ${alt?78:70} c-12 -14 -14 -22 -14 -27 a14 14 0 0 1 28 0 c0 5 -2 13 -14 27z" fill="#8e1f2e" stroke="#fff" stroke-width="2"/><circle cx="${alt?205:206}" cy="${alt?51:43}" r="5" fill="#fff"/></g>`;
+});
+
+/* little bouquets beside the arch */
+(function(){
+  const pet=(r,w)=>`M0 0 C${-r*w} ${-r*.25} ${-r*w*.95} ${-r*.98} 0 ${-r} C${r*w*.95} ${-r*.98} ${r*w} ${-r*.25} 0 0Z`;
+  const P={c:['#e9cfa6','#f7e9d2','#fffaf1'],b:['#d98f8a','#f2c3bd','#fde8e4'],p:['#e3a274','#f6cfae','#fff0e2']};
+  let defs='<defs>'; for(const k in P){const [a,b,c]=P[k]; defs+=`<radialGradient id="bq${k}" cx=".5" cy="1" r="1.05"><stop offset="0" stop-color="${a}"/><stop offset=".55" stop-color="${b}"/><stop offset="1" stop-color="${c}"/></radialGradient>`;}
+  defs+=`<linearGradient id="bql" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#5f7a4d"/><stop offset="1" stop-color="#a9bf8c"/></linearGradient></defs>`;
+  const rose=(x,y,r,k)=>{let g=`<g transform="translate(${x} ${y})">`;[[7,1,0,.62],[6,.8,25,.6],[5,.6,10,.58],[4,.42,40,.58]].forEach(([n,s,o,w])=>{for(let i=0;i<n;i++)g+=`<path d="${pet(r*s,w)}" transform="rotate(${o+i*360/n})" fill="url(#bq${k})" stroke="${P[k][0]}" stroke-opacity=".5"/>`});return g+`<circle r="${r*.18}" fill="${P[k][0]}"/></g>`};
+  const leaf=(x,y,l,a)=>`<path transform="translate(${x} ${y}) rotate(${a})" d="M0 0 C${l*.3} ${-l*.3} ${l*.25} ${-l*.8} 0 ${-l} C${-l*.25} ${-l*.8} ${-l*.3} ${-l*.3} 0 0Z" fill="url(#bql)"/>`;
+  const svg = defs + leaf(150,200,90,-60)+leaf(150,200,100,-20)+leaf(150,200,80,30)+leaf(150,200,90,70) +
+    rose(120,180,48,'b')+rose(190,200,42,'p')+rose(150,230,58,'c')+rose(90,240,36,'c');
+  document.querySelectorAll('[data-bq]').forEach(s=>s.innerHTML=svg);
+})();
+
+/* ---------- countdown ---------- */
+const AR_DIG='٠١٢٣٤٥٦٧٨٩'; const fmt=n=>{ const s=String(n).padStart(2,'0'); return lang==='ar'? s.replace(/\d/g,d=>AR_DIG[d]) : s; };
+let last={};
+function tickCountdown(force){
+  let ms = WEDDING - Date.now();
+  if(ms<=0){ document.getElementById('count').innerHTML=`<p class="done gold" style="grid-column:1/-1">${T[lang].today}</p>`; return; }
+  const v={d:Math.floor(ms/864e5), h:Math.floor(ms/36e5)%24, m:Math.floor(ms/6e4)%60, s:Math.floor(ms/1e3)%60};
+  for(const k in v){ const el=document.getElementById('cd-'+k); if(!el) continue;
+    if(force || last[k]!==v[k]){ el.textContent=fmt(v[k]); el.classList.remove('tick'); void el.offsetWidth; el.classList.add('tick'); } }
+  last=v;
+}
+setInterval(tickCountdown,1000);
+
+/* ---------- reveal on scroll ---------- */
+const io = 'IntersectionObserver' in window ? new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.remove('pre'); io.unobserve(e.target);} }),{threshold:.15}) : null;
+if(io) document.querySelectorAll('.rv').forEach(el=>{ const r=el.getBoundingClientRect(); if(r.top>innerHeight*.9){ el.classList.add('pre'); io.observe(el);} });
+
+/* ---------- petals + sparkles canvas ---------- */
+const cv=document.getElementById('fx'), cx=cv.getContext('2d'); let W,H,DPR;
+function rs(){ DPR=Math.min(2,devicePixelRatio||1); W=cv.width=innerWidth*DPR; H=cv.height=innerHeight*DPR; }
+rs(); addEventListener('resize',rs);
+const COLORS=['#f6c9c2','#f2b6b0','#fde3dc','#fff3e6','#f7d2b8','#ffffff'];
+const petals=[], sparks=[];
+function petal(x,y,burst){ return {x:x??Math.random()*W, y:y??-20*DPR, s:(8+Math.random()*10)*DPR, a:Math.random()*6.28, va:(Math.random()-.5)*.05,
+  vx: burst?(Math.random()-.5)*14*DPR:(Math.random()-.3)*.6*DPR, vy: burst?(-6-Math.random()*10)*DPR:(.6+Math.random()*1.1)*DPR, sw:Math.random()*6.28, c:COLORS[Math.random()*COLORS.length|0], burst}; }
+for(let i=0;i<26;i++){ const p=petal(); p.y=Math.random()*H; petals.push(p); }
+for(let i=0;i<28;i++) sparks.push({x:Math.random()*W,y:Math.random()*H,r:(1+Math.random()*2)*DPR,t:Math.random()*6.28,v:.02+Math.random()*.03});
+function drawPetal(p){ cx.save(); cx.translate(p.x,p.y); cx.rotate(p.a); cx.scale(1, .6+.4*Math.sin(p.sw*2));
+  cx.fillStyle=p.c; cx.globalAlpha=.85; cx.beginPath(); cx.moveTo(0,-p.s); cx.bezierCurveTo(p.s*.9,-p.s*.6,p.s*.7,p.s*.7,0,p.s); cx.bezierCurveTo(-p.s*.7,p.s*.7,-p.s*.9,-p.s*.6,0,-p.s); cx.fill();
+  cx.globalAlpha=.35; cx.strokeStyle='#d98f8a'; cx.lineWidth=DPR; cx.beginPath(); cx.moveTo(0,-p.s*.8); cx.quadraticCurveTo(p.s*.15,0,0,p.s*.8); cx.stroke(); cx.restore(); }
+function frame(){
+  cx.clearRect(0,0,W,H);
+  for(const s of sparks){ s.t+=s.v; const a=(Math.sin(s.t)+1)/2; cx.globalAlpha=a*.8; cx.fillStyle='#f3d27e';
+    cx.beginPath(); cx.arc(s.x,s.y,s.r*(.6+a),0,6.28); cx.fill(); cx.globalAlpha=a*.25; cx.beginPath(); cx.arc(s.x,s.y,s.r*4,0,6.28); cx.fill(); }
+  cx.globalAlpha=1;
+  for(let i=petals.length-1;i>=0;i--){ const p=petals[i];
+    p.sw+=.02; p.a+=p.va; p.x+=p.vx+Math.sin(p.sw)*.6*DPR; p.y+=p.vy;
+    if(p.burst){ p.vy+=.25*DPR; p.vx*=.985; }
+    drawPetal(p);
+    if(p.y>H+30*DPR || p.x<-60*DPR || p.x>W+60*DPR){ if(p.burst){ petals.splice(i,1);} else { Object.assign(p, petal()); } } }
+  requestAnimationFrame(frame);
+}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches) requestAnimationFrame(frame);
+function burst(){ for(let i=0;i<70;i++) petals.push(petal(W/2,H*.45,true)); }
+
+/* ---------- music box: Pachelbel's Canon in D (public domain), synthesized ---------- */
+let AC=null, master=null, playing=false, timer=null, nextT=0, step=0;
+const N=n=>440*Math.pow(2,(n-69)/12);
+// chords per bar: D A Bm F#m G D G A (bass midi + chord tones)
+const BASS=[50,45,47,42,43,38,43,45];
+const CH=[[62,66,69],[61,64,69],[62,66,71],[61,66,69],[62,67,71],[62,66,69],[62,67,71],[61,64,69]];
+const MEL=[78,76,74,73,71,69,71,73];  // the canon theme (one per half bar)
+const MEL2=[74,73,71,69,67,66,67,64];
+const BAR=2.6;
+function bell(f,t,dur,vol){
+  const o=AC.createOscillator(), o2=AC.createOscillator(), g=AC.createGain();
+  o.type='sine'; o2.type='sine'; o.frequency.value=f; o2.frequency.value=f*2.0;
+  const g2=AC.createGain(); g2.gain.value=.18;
+  o.connect(g); o2.connect(g2); g2.connect(g); g.connect(master);
+  g.gain.setValueAtTime(0,t); g.gain.linearRampToValueAtTime(vol,t+.01); g.gain.exponentialRampToValueAtTime(.0008,t+dur);
+  o.start(t); o2.start(t); o.stop(t+dur+.05); o2.stop(t+dur+.05);
+}
+function schedule(){
+  while(nextT < AC.currentTime+1.2){
+    const bar=step%8, cycle=Math.floor(step/8)%4;
+    bell(N(BASS[bar]), nextT, BAR*1.2, .22);
+    if(cycle>=1){ bell(N(MEL[bar]), nextT, BAR*.9, .16); bell(N(MEL2[bar]), nextT+BAR/2, BAR*.8, .13); }
+    const tones=CH[bar];
+    for(let k=0;k<8;k++){ const n=tones[[0,1,2,1,0,1,2,1][k]]+(k>=4&&cycle>=2?12:0); bell(N(n), nextT+k*BAR/8, BAR*.5, cycle===0?.09:.07); }
+    nextT+=BAR; step++;
+  }
+}
+function startMusic(){
+  try{
+    if(!AC){ AC=new (window.AudioContext||window.webkitAudioContext)(); master=AC.createGain(); master.gain.value=.55;
+      // simple reverb
+      const len=AC.sampleRate*2.6, buf=AC.createBuffer(2,len,AC.sampleRate);
+      for(let c=0;c<2;c++){ const d=buf.getChannelData(c); for(let i=0;i<len;i++) d[i]=(Math.random()*2-1)*Math.pow(1-i/len,2.6); }
+      const rev=AC.createConvolver(); rev.buffer=buf; const wet=AC.createGain(); wet.gain.value=.35;
+      master.connect(AC.destination); master.connect(rev); rev.connect(wet); wet.connect(AC.destination); }
+    AC.resume(); nextT=AC.currentTime+.1; playing=true; schedule(); timer=setInterval(schedule,250);
+    document.getElementById('musicBtn').classList.add('on');
+  }catch(e){}
+}
+function stopMusic(){ playing=false; clearInterval(timer); if(AC) AC.suspend(); document.getElementById('musicBtn').classList.remove('on'); }
+document.getElementById('musicBtn').addEventListener('click',()=> playing? stopMusic() : (AC&&AC.state==='suspended' ? (AC.resume(), playing=true, nextT=AC.currentTime+.1, timer=setInterval(schedule,250), document.getElementById('musicBtn').classList.add('on')) : startMusic()));
+
+/* ---------- open the envelope ---------- */
+let opened=false;
+function openInvite(){
+  if(opened) return; opened=true;
+  document.getElementById('env').classList.add('open');
+  startMusic();
+  setTimeout(burst, 700);
+  setTimeout(()=>{ document.getElementById('intro').classList.add('gone'); document.getElementById('hero').classList.add('hero-in'); burst(); }, 2100);
+  setTimeout(()=>{ document.getElementById('intro').hidden=true; }, 3300);
+}
+document.getElementById('env').addEventListener('click',openInvite);
+document.getElementById('tapBtn').addEventListener('click',openInvite);
+document.getElementById('env').addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openInvite(); } });
+
+/* stagger hero items */
+document.querySelectorAll('#hero .h-item').forEach((el,i)=>el.style.animationDelay=(i*.15)+'s');
+applyLang();
+</script>
+
+</body>
+</html>
